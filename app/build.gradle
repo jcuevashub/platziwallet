@@ -6,7 +6,6 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.cristianvillamil.platziwallet"
         minSdkVersion 21
@@ -29,6 +28,7 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
+    namespace 'com.cristianvillamil.platziwallet'
 }
 
 dependencies {
@@ -44,7 +44,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.mikhaellopez:circularprogressbar:3.0.3'
+    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
     implementation 'de.hdodenhof:circleimageview:3.0.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
     testImplementation 'junit:junit:4.12'
