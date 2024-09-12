@@ -18,7 +18,7 @@ class MessageFactory {
             }
             TYPE_SUCCESS -> {
                 return AlertDialog.Builder(context)
-                    .setMessage("El contenido fue cargado exitosament")
+                    .setMessage("El contenido fue cargado exitosamente")
             }
             TYPE_INFO -> {
                 return AlertDialog.Builder(context)
