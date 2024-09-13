@@ -13,6 +13,7 @@ import com.cristianvillamil.platziwallet.ui.home.FavoriteTransfer
 import com.cristianvillamil.platziwallet.ui.home.HomeContract
 import com.cristianvillamil.platziwallet.ui.home.data.MessageFactory
 import com.cristianvillamil.platziwallet.ui.home.data.MessageFactory.Companion.TYPE_ERROR
+import com.cristianvillamil.platziwallet.ui.home.data.MessageFactory.Companion.TYPE_SUCCESS
 import com.cristianvillamil.platziwallet.ui.home.presenter.HomePresenter
 import com.cristianvillamil.platziwallet.ui.observale.AvailableBalanceObservable
 import com.cristianvillamil.platziwallet.ui.observale.Observer
@@ -76,10 +77,10 @@ class HomeFragment : Fragment(), HomeContract.View {
     override fun showFavoriteTransfers(favoriteTransfer: List<FavoriteTransfer>) {
         favoriteTransferAdapter.setData(favoriteTransfer)
         val dialogFactory = MessageFactory()
-        context?.let {
-            val errorDialog = dialogFactory.getDialog(it, TYPE_ERROR)
-            errorDialog.show()
-        }
+//        context?.let {
+//            val errorDialog = dialogFactory.getDialog(it, TYPE_SUCCESS)
+//            errorDialog.show()
+//        }
 
     }
 }

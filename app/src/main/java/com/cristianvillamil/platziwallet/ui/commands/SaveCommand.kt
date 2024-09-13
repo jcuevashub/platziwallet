@@ -8,9 +8,11 @@ import java.io.OutputStreamWriter
 class SaveCommand : FileCommand {
     override fun execute(context: Context, finaName: String, vararg arguments: String) {
         try {
+            var argumentsString = ""
+            arguments.forEach { argumentsString = argumentsString + "\n"+it }
             val outputStreamWrite =
                 OutputStreamWriter(context.openFileOutput(finaName, Context.MODE_PRIVATE))
-            outputStreamWrite.write(arguments.toString())
+            outputStreamWrite.write(argumentsString)
             outputStreamWrite.close()
         } catch (exception: IOException) {
             Log.e("SaveCommand", "File write failed: $exception")
